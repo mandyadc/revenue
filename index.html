@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#20285c">
+<meta name="description" content="Official service portal of the Deputy Commissioner Office, Mandya, Government of Karnataka.">
+<title>Deputy Commissioner Office, Mandya | Revenue Department</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+:root {
+    --navy:#20285c;
+    --navy-dark:#171d46;
+    --blue:#2f8fd8;
+    --blue-soft:#eef8ff;
+    --green:#00a77b;
+    --green-soft:#eefbf6;
+    --pink:#df419b;
+    --pink-soft:#fff1f8;
+    --orange:#ff8a22;
+    --orange-soft:#fff5e8;
+    --yellow:#f3b51b;
+    --yellow-soft:#fff9e8;
+    --purple:#7657c8;
+    --purple-soft:#f5f1ff;
+    --ink:#172033;
+    --muted:#64748b;
+    --line:#dfe5ef;
+    --page:#f5f7fb;
+    --white:#fff;
+    --shadow:0 8px 28px rgba(32,40,92,.08);
+    --shadow-hover:0 16px 38px rgba(32,40,92,.14);
+    --radius:16px;
+    --max:1480px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+    font-family:'Inter','Noto Sans Kannada',sans-serif;
+    background:var(--page);
+    color:var(--ink);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+}
+body.kannada{font-family:'Noto Sans Kannada','Inter',sans-serif}
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+button{cursor:pointer}
+img{max-width:100%;display:block}
+
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+
+/* TOP GOVERNMENT BAR */
+.govbar{
+    background:var(--navy);
+    color:#fff;
+    min-height:54px;
+    display:flex;
+    align-items:center;
+}
+.govbar-inner{
+    width:min(var(--max),calc(100% - 40px));
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+.gov-brand{display:flex;align-items:center;gap:12px}
+.gov-emblem{
+    width:40px;height:40px;border-radius:50%;
+    background:#fff;padding:3px;object-fit:contain;
+    border:2px solid #f4c53d;
+}
+.gov-brand strong{font-size:.86rem;display:block}
+.gov-brand span{font-size:.68rem;color:#dce3ff;display:block;margin-top:1px}
+.gov-meta{display:flex;align-items:center;gap:18px;font-size:.72rem;color:#e8ecff}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#23c58b;display:inline-block;margin-right:6px}
+
+.lang-btn{
+    border:1px solid rgba(255,255,255,.35);
+    background:rgba(255,255,255,.08);
+    color:#fff;border-radius:999px;
+    padding:6px 11px;font-size:.7rem;font-weight:700;
+}
+.lang-btn:hover{background:rgba(255,255,255,.16)}
+
+/* HEADER */
+.site-header{
+    background:#fff;
+    border-bottom:1px solid var(--line);
+}
+.header-inner{
+    width:min(var(--max),calc(100% - 40px));
+    margin:auto;
+    min-height:104px;
+    display:grid;
+    grid-template-columns:260px 1fr 260px;
+    align-items:center;
+    gap:24px;
+}
+.dc-profile{display:flex;align-items:center;gap:13px}
+.dc-photo{
+    width:76px;height:76px;border-radius:50%;
+    object-fit:cover;background:#f3f5f8;
+    border:3px solid #fff;
+    box-shadow:0 0 0 2px #e9edf5,0 7px 18px rgba(32,40,92,.12);
+}
+.dc-name{font-size:.88rem;font-weight:800;color:var(--navy)}
+.dc-role{font-size:.72rem;color:var(--muted);margin-top:2px}
+.dc-office{font-size:.67rem;color:var(--blue);font-weight:700;margin-top:5px}
+
+.title-area{text-align:center}
+.kicker{font-size:.66rem;font-weight:800;letter-spacing:1.6px;color:var(--navy);text-transform:uppercase}
+.title-area h1{font-size:1.75rem;line-height:1.2;margin:5px 0;color:var(--navy);font-weight:800}
+.title-area p{font-size:.76rem;color:var(--muted)}
+.title-rule{width:100px;height:3px;border-radius:4px;margin:9px auto 0;background:linear-gradient(90deg,var(--blue),var(--pink),var(--orange))}
+
+.header-right{display:flex;justify-content:flex-end}
+.office-badge{
+    background:linear-gradient(135deg,var(--blue-soft),#fff);
+    border:1px solid #cfe8fb;
+    border-radius:14px;padding:13px 15px;
+    min-width:210px;
+}
+.office-badge .label{font-size:.63rem;text-transform:uppercase;color:var(--muted);font-weight:800;letter-spacing:.8px}
+.office-badge strong{display:block;color:var(--navy);font-size:.78rem;margin-top:3px}
+.office-badge span{display:block;color:var(--muted);font-size:.68rem;margin-top:2px}
+
+/* NAV */
+.nav{
+    position:sticky;top:0;z-index:1000;
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    box-shadow:0 4px 15px rgba(32,40,92,.06);
+}
+.nav-inner{
+    width:min(var(--max),calc(100% - 40px));margin:auto;
+    min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:18px;
+}
+.nav-links{display:flex;align-items:center;gap:4px;overflow:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-link{
+    white-space:nowrap;padding:10px 13px;border-radius:9px;
+    font-size:.76rem;font-weight:700;color:#46516a;
+}
+.nav-link:hover,.nav-link.active{background:var(--navy);color:#fff}
+.nav-link i{margin-right:5px}
+.nav-search{
+    width:280px;position:relative;flex:0 0 280px;
+}
+.nav-search input{
+    width:100%;height:36px;border:1px solid var(--line);
+    border-radius:999px;padding:0 38px 0 14px;outline:none;
+    background:#f8fafc;font-size:.75rem;
+}
+.nav-search input:focus{border-color:#9bcdf0;box-shadow:0 0 0 4px rgba(47,143,216,.08)}
+.nav-search i{position:absolute;right:13px;top:9px;color:var(--muted)}
+
+/* HERO */
+.hero{
+    background:
+      radial-gradient(circle at 85% 20%,rgba(223,65,155,.10),transparent 26%),
+      radial-gradient(circle at 8% 80%,rgba(0,167,123,.10),transparent 25%),
+      linear-gradient(135deg,#fff 0%,#f7faff 52%,#fff 100%);
+    border-bottom:1px solid var(--line);
+}
+.hero-inner{
+    width:min(var(--max),calc(100% - 40px));margin:auto;
+    padding:34px 0 28px;
+    display:grid;grid-template-columns:1.45fr .75fr;gap:28px;align-items:center;
+}
+.hero-copy .eyebrow{
+    display:inline-flex;align-items:center;gap:7px;
+    color:var(--navy);background:#eef1ff;border:1px solid #dfe4ff;
+    padding:6px 10px;border-radius:999px;font-size:.66rem;font-weight:800;
+}
+.hero-copy h2{font-size:2.05rem;line-height:1.15;color:var(--navy);margin:12px 0 8px;max-width:720px}
+.hero-copy h2 span{color:var(--blue)}
+.hero-copy p{font-size:.84rem;color:var(--muted);max-width:680px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.btn{
+    display:inline-flex;align-items:center;gap:7px;padding:10px 15px;
+    border-radius:9px;font-size:.72rem;font-weight:800;border:1px solid transparent;
+}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{background:var(--navy-dark);transform:translateY(-1px)}
+.btn-light{background:#fff;border-color:var(--line);color:var(--navy)}
+.btn-light:hover{border-color:#b9c3d6;background:#f9fbff}
+
+.hero-panel{
+    background:#fff;border:1px solid var(--line);border-radius:18px;
+    box-shadow:var(--shadow);padding:20px;position:relative;overflow:hidden;
+}
+.hero-panel::before{
+    content:"";position:absolute;left:0;top:0;right:0;height:5px;
+    background:linear-gradient(90deg,var(--blue),var(--green),var(--pink),var(--orange));
+}
+.hero-panel-head{display:flex;align-items:center;gap:12px;padding-top:3px}
+.hero-mini-photo{width:58px;height:58px;border-radius:50%;object-fit:cover;border:2px solid #eef1f7}
+.hero-panel h3{font-size:.86rem;color:var(--navy)}
+.hero-panel small{font-size:.68rem;color:var(--muted)}
+.hero-panel p{font-size:.73rem;color:var(--muted);margin-top:13px}
+.hero-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.hero-stat{padding:11px;border-radius:11px;background:var(--blue-soft);border:1px solid #d7ecfb}
+.hero-stat:nth-child(2){background:var(--green-soft);border-color:#d5f1e7}
+.hero-stat strong{display:block;color:var(--navy);font-size:1rem}
+.hero-stat span{font-size:.61rem;color:var(--muted)}
+
+/* TICKER */
+.ticker{background:var(--navy);color:#fff;overflow:hidden}
+.ticker-inner{width:min(var(--max),calc(100% - 40px));margin:auto;display:flex;align-items:center;height:36px}
+.ticker-label{font-size:.68rem;font-weight:800;white-space:nowrap;padding-right:18px;border-right:1px solid rgba(255,255,255,.2)}
+.ticker-label i{color:#ffd34f;margin-right:5px}
+.ticker-track{overflow:hidden;white-space:nowrap;flex:1}
+.ticker-move{display:inline-block;padding-left:100%;animation:marquee 28s linear infinite;font-size:.7rem;color:#e9edff}
+.ticker:hover .ticker-move{animation-play-state:paused}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+
+/* QUICK STATS */
+.stats{padding:20px 0 5px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat-card{
+    min-height:78px;border-radius:13px;border:1px solid var(--line);
+    background:#fff;padding:13px 15px;display:flex;align-items:center;gap:12px;
+    box-shadow:0 4px 14px rgba(32,40,92,.04);
+}
+.stat-icon{width:39px;height:39px;border-radius:11px;display:grid;place-items:center;font-size:1rem}
+.stat-card:nth-child(1) .stat-icon{background:var(--blue-soft);color:var(--blue)}
+.stat-card:nth-child(2) .stat-icon{background:var(--green-soft);color:var(--green)}
+.stat-card:nth-child(3) .stat-icon{background:var(--pink-soft);color:var(--pink)}
+.stat-card:nth-child(4) .stat-icon{background:var(--yellow-soft);color:var(--orange)}
+.stat-card strong{display:block;font-size:1.05rem;color:var(--navy)}
+.stat-card span{font-size:.64rem;color:var(--muted)}
+
+/* SERVICES */
+.services{padding:20px 0 65px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin:5px 0 18px}
+.section-title h2{font-size:1.2rem;color:var(--navy)}
+.section-title p{font-size:.72rem;color:var(--muted);margin-top:3px}
+.filter-pills{display:flex;gap:6px;flex-wrap:wrap}
+.filter-pill{
+    border:1px solid var(--line);background:#fff;color:#536078;
+    padding:7px 10px;border-radius:999px;font-size:.65rem;font-weight:800;
+}
+.filter-pill:hover,.filter-pill.active{background:var(--navy);border-color:var(--navy);color:#fff}
+
+.links-grid{
+    display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;
+    align-items:start;
+}
+.card{
+    background:#fff;border:1px solid var(--line)!important;
+    border-top:4px solid var(--blue)!important;border-radius:14px;
+    box-shadow:0 5px 18px rgba(32,40,92,.045);
+    overflow:hidden;transition:.25s;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.card h3{
+    margin:0!important;min-height:48px;padding:11px 12px!important;
+    background:var(--blue-soft)!important;color:var(--navy)!important;
+    border-bottom:1px solid #d9eaf7!important;
+    font-size:.76rem!important;letter-spacing:.15px!important;
+    display:flex;align-items:center;gap:8px;
+}
+.card h3 i{color:var(--blue)!important;font-size:.95rem}
+.card ul{padding:9px 11px 11px!important;gap:2px!important}
+.card ul li{
+    font-size:.71rem!important;line-height:1.35!important;
+    border-bottom:1px dashed #edf0f5!important;padding:5px 0!important;
+}
+.card ul li:last-child{border-bottom:none!important}
+.card ul li::before{color:var(--blue)!important}
+.card ul li a{color:#334155!important;font-weight:600!important}
+.card ul li a:hover{color:var(--blue)!important;text-decoration:none!important;padding-left:2px}
+.card:nth-child(4n+2){border-top-color:var(--green)!important}
+.card:nth-child(4n+2) h3{background:var(--green-soft)!important;border-bottom-color:#d9f1e7!important}
+.card:nth-child(4n+2) h3 i,.card:nth-child(4n+2) ul li::before{color:var(--green)!important}
+.card:nth-child(4n+3){border-top-color:var(--pink)!important}
+.card:nth-child(4n+3) h3{background:var(--pink-soft)!important;border-bottom-color:#f4dbe9!important}
+.card:nth-child(4n+3) h3 i,.card:nth-child(4n+3) ul li::before{color:var(--pink)!important}
+.card:nth-child(4n){border-top-color:var(--orange)!important}
+.card:nth-child(4n) h3{background:var(--yellow-soft)!important;border-bottom-color:#f5e6bd!important}
+.card:nth-child(4n) h3 i,.card:nth-child(4n) ul li::before{color:var(--orange)!important}
+
+.no-results{display:none;text-align:center;padding:45px 20px;color:var(--muted);grid-column:1/-1}
+.no-results i{font-size:2rem;color:#b9c2d2;display:block;margin-bottom:7px}
+
+/* FOOTER */
+.footer{
+    background:var(--navy);color:#dce2f4;border-top:4px solid #38427d;
+}
+.footer-inner{width:min(var(--max),calc(100% - 40px));margin:auto;padding:32px 0 18px}
+.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:30px}
+.footer h3{font-size:.92rem;color:#fff;margin-bottom:8px}
+.footer h4{font-size:.68rem;color:#fff;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
+.footer p,.footer li,.footer a{font-size:.68rem;color:#bfc8df}
+.footer a:hover{color:#fff}
+.footer ul{list-style:none}
+.footer li{margin:6px 0}
+.footer-bottom{
+    margin-top:24px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);
+    display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;
+}
+.footer-bottom span{font-size:.64rem;color:#9faac5}
+
+.top-btn{
+    position:fixed;right:22px;bottom:22px;width:42px;height:42px;border:0;
+    border-radius:12px;background:var(--navy);color:#fff;display:none;
+    box-shadow:0 8px 20px rgba(0,0,0,.18);z-index:1200;
+}
+.top-btn:hover{background:var(--blue)}
+
+
+/* ===== PROFESSIONAL DISTRICT INFORMATION ===== */
+.title-logo{width:52px;height:52px;object-fit:contain;margin:0 auto 7px;background:#fff;border-radius:50%;padding:3px;border:2px solid #f0c33b;box-shadow:0 5px 16px rgba(32,40,92,.12)}
+.photo-wrap{position:relative;width:76px;height:76px;flex:0 0 76px}
+.photo-wrap .dc-photo{width:76px;height:76px}
+.photo-fallback{display:none;position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;place-items:center;font-weight:800;font-size:1.05rem;border:3px solid #fff;box-shadow:0 0 0 2px #e9edf5,0 7px 18px rgba(32,40,92,.12)}
+.photo-wrap.photo-missing .photo-fallback{display:grid}
+.hero-panel-head .hero-photo-wrap{position:relative;width:54px;height:54px;flex:0 0 54px}
+.hero-panel-head .hero-mini-photo{width:54px;height:54px;border-radius:50%;object-fit:cover}
+.hero-photo-fallback{display:none;position:absolute;inset:0;border-radius:50%;background:var(--navy);color:#fff;place-items:center;font-weight:800}
+.hero-photo-wrap.photo-missing .hero-photo-fallback{display:grid}
+.district-info{padding:0 0 28px}
+.info-layout{display:grid;grid-template-columns:1.45fr .9fr;gap:18px}
+.info-card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.info-card-head{display:flex;align-items:center;gap:10px;padding:14px 17px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,#f7fbff,#fff)}
+.info-card-head .info-icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue);flex:0 0 auto}
+.info-card-head h3{font-size:.88rem;color:var(--navy);font-weight:800}
+.info-card-head p{font-size:.65rem;color:var(--muted);margin-top:1px}
+.info-card-body{padding:17px}
+.about-copy{font-size:.72rem;color:#475569;line-height:1.72}
+.about-copy p{margin-bottom:10px}.about-copy p:last-child{margin-bottom:0}
+.glance-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.glance-item{border:1px solid #e8edf4;border-radius:12px;padding:11px 12px;background:#fbfcfe}
+.glance-item .label{font-size:.61rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.glance-item .value{font-size:.9rem;color:var(--navy);font-weight:800;margin-top:2px}
+.admin-summary{margin-top:18px}.admin-summary .summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.admin-total{border:1px solid #e7ebf2;border-radius:13px;padding:12px;background:#fff}
+.admin-total .small{font-size:.62rem;color:var(--muted);font-weight:700}.admin-total strong{display:block;font-size:1.15rem;color:var(--navy);margin-top:2px}
+.admin-total.blue{border-top:3px solid var(--blue)}.admin-total.green{border-top:3px solid var(--green)}.admin-total.orange{border-top:3px solid var(--orange)}
+.admin-table-wrap{overflow:auto}.admin-table{width:100%;border-collapse:separate;border-spacing:0;font-size:.68rem}
+.admin-table th{background:#f5f8fc;color:var(--navy);font-weight:800;text-align:left;padding:9px 10px;border-bottom:1px solid #dfe5ef;white-space:nowrap}
+.admin-table td{padding:8px 10px;border-bottom:1px solid #edf0f5;color:#475569;background:#fff}.admin-table tr:last-child td{border-bottom:none}
+.admin-table td:first-child,.admin-table th:first-child{text-align:center;width:55px}.admin-table tbody tr:hover td{background:#fbfcff}
+.card ul{list-style:none!important;margin:0!important;padding:9px 11px 11px!important}
+.card ul li{position:relative!important;padding:5px 4px 5px 17px!important;margin:0!important;list-style:none!important;display:block!important;border-bottom:1px dashed #e8edf4!important}
+.card ul li::marker{display:none!important}.card ul li::before{content:""!important;position:absolute!important;left:2px!important;top:12px!important;width:6px!important;height:6px!important;border-radius:50%!important;background:currentColor!important;display:block!important}
+.card ul li a{display:block!important}
+.services{padding-top:14px!important}.section-head{margin-bottom:15px!important}.section-title h2{font-size:1.22rem!important}
+.section-title h2::before{content:"";display:inline-block;width:4px;height:21px;border-radius:3px;background:linear-gradient(180deg,var(--blue),var(--pink));vertical-align:-4px;margin-right:9px}
+@media(max-width:900px){.info-layout{grid-template-columns:1fr}.admin-summary .summary-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.glance-grid{grid-template-columns:1fr 1fr}.title-logo{width:46px;height:46px}}
+
+@media(max-width:1200px){
+    .header-inner{grid-template-columns:220px 1fr 220px}
+    .links-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:900px){
+    .gov-meta .hide-sm{display:none}
+    .header-inner{grid-template-columns:1fr;justify-items:center;text-align:center;padding:18px 0}
+    .dc-profile,.header-right{justify-content:center}
+    .header-right{width:100%}
+    .office-badge{min-width:260px}
+    .nav-inner{flex-direction:column;align-items:stretch;padding:7px 0}
+    .nav-links{justify-content:center}
+    .nav-search{width:100%;flex-basis:auto}
+    .hero-inner{grid-template-columns:1fr}
+    .hero-copy{text-align:center}
+    .hero-copy p{margin:auto}
+    .hero-actions{justify-content:center}
+    .stats-grid{grid-template-columns:repeat(2,1fr)}
+    .section-head{align-items:flex-start;flex-direction:column}
+    .links-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+    .container,.govbar-inner,.header-inner,.nav-inner,.hero-inner,.ticker-inner,.footer-inner{width:min(100% - 24px,var(--max))}
+    .gov-brand span{display:none}
+    .gov-meta{font-size:.64rem}
+    .title-area h1{font-size:1.35rem}
+    .hero-copy h2{font-size:1.55rem}
+    .stats-grid,.links-grid{grid-template-columns:1fr}
+    .hero-actions .btn{flex:1;justify-content:center}
+    .footer-grid{grid-template-columns:1fr}
+    .footer-bottom{flex-direction:column}
+    .nav-links{justify-content:flex-start}
+}
+</style>
+<!-- IMAGE PATHS: upload assets/img/goklogo.png and assets/img/kumar_dc.jpeg to the same GitHub repository. -->
+</head>
+
+<body id="top">
+
+<div class="govbar">
+    <div class="govbar-inner">
+        <div class="gov-brand">
+            <img src="assets/img/goklogo.png" alt="Government of Karnataka Emblem" class="gov-emblem">
+            <div>
+                <strong>Government of Karnataka</strong>
+                <span data-en="Revenue Department" data-kn="ಕಂದಾಯ ಇಲಾಖೆ">Revenue Department</span>
+            </div>
+        </div>
+        <div class="gov-meta">
+            <span class="hide-sm"><i class="bi bi-calendar3"></i> <span id="today"></span></span>
+            <span><span class="live-dot"></span>Mandya, Karnataka</span>
+            <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">ಕನ್ನಡ</button>
+        </div>
+    </div>
+</div>
+
+<header class="site-header">
+    <div class="header-inner">
+        <div class="dc-profile">
+            <div class="photo-wrap" id="dcPhotoWrap">
+                <img src="./assets/img/kumar_dc.jpeg" alt="Dr. Kumar, IAS, Deputy Commissioner, Mandya" class="dc-photo" loading="eager" onerror="this.style.display='none';document.getElementById('dcPhotoWrap').classList.add('photo-missing')">
+                <span class="photo-fallback">DK</span>
+            </div>
+            <div>
+                <div class="dc-name">Dr. Kumar, IAS</div>
+                <div class="dc-role" data-en="Deputy Commissioner, Mandya" data-kn="ಜಿಲ್ಲಾಧಿಕಾರಿಗಳು, ಮಂಡ್ಯ">Deputy Commissioner, Mandya</div>
+                <div class="dc-office" data-en="Deputy Commissioner Office, Mandya" data-kn="ಜಿಲ್ಲಾಧಿಕಾರಿ ಕಚೇರಿ, ಮಂಡ್ಯ">Deputy Commissioner Office, Mandya</div>
+            </div>
+        </div>
+
+        <div class="title-area">
+            <img src="./assets/img/goklogo.png" alt="Government of Karnataka Emblem" class="title-logo" onerror="this.style.opacity='0'">
+            <div class="kicker" data-en="Government of Karnataka" data-kn="ಕರ್ನಾಟಕ ಸರ್ಕಾರ">Government of Karnataka</div>
+            <h1 data-en="Deputy Commissioner Office, Mandya" data-kn="ಮಂಡ್ಯ ಜಿಲ್ಲಾಧಿಕಾರಿ ಕಚೇರಿ">Deputy Commissioner Office, Mandya</h1>
+            <p data-en="Revenue Department • Digital Services &amp; Official Links" data-kn="ಕಂದಾಯ ಇಲಾಖೆ • ಡಿಜಿಟಲ್ ಸೇವೆಗಳು ಮತ್ತು ಅಧಿಕೃತ ಕೊಂಡಿಗಳು">Revenue Department • Digital Services &amp; Official Links</p>
+            <div class="title-rule"></div>
+        </div>
+
+        <div class="header-right">
+            <div class="office-badge">
+                <div class="label" data-en="Official Service Portal" data-kn="ಅಧಿಕೃತ ಸೇವಾ ಪೋರ್ಟಲ್">Official Service Portal</div>
+                <strong>Mandya District Administration</strong>
+                <span data-en="One-page access to revenue systems" data-kn="ಕಂದಾಯ ವ್ಯವಸ್ಥೆಗಳಿಗೆ ಒಂದೇ ಪುಟದ ಪ್ರವೇಶ">One-page access to revenue systems</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <div class="nav-links">
+            <a class="nav-link active" href="#top"><i class="bi bi-house-door-fill"></i><span data-en="Home" data-kn="ಮುಖಪುಟ">Home</span></a>
+            <a class="nav-link" href="#services"><i class="bi bi-grid-3x3-gap-fill"></i><span data-en="All Services" data-kn="ಎಲ್ಲಾ ಸೇವೆಗಳು">All Services</span></a>
+            <a class="nav-link" href="#district-profile"><i class="bi bi-geo-alt-fill"></i><span data-en="District Profile" data-kn="ಜಿಲ್ಲಾ ವಿವರ">District Profile</span></a>
+            <a class="nav-link" href="#about"><i class="bi bi-building"></i><span data-en="Office" data-kn="ಕಚೇರಿ">Office</span></a>
+        </div>
+        <div class="nav-search">
+            <input id="siteSearch" type="search" placeholder="Search services or links..." data-en="Search services or links..." data-kn="ಸೇವೆಗಳು ಅಥವಾ ಕೊಂಡಿಗಳನ್ನು ಹುಡುಕಿ..." oninput="filterServices()">
+            <i class="bi bi-search"></i>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-copy">
+            <span class="eyebrow"><i class="bi bi-shield-check"></i> <span data-en="Official District Service Portal" data-kn="ಅಧಿಕೃತ ಜಿಲ್ಲಾ ಸೇವಾ ಪೋರ್ಟಲ್">Official District Service Portal</span></span>
+            <h2 data-en="Revenue services, reports and digital systems — <span>all in one place.</span>" data-kn="ಕಂದಾಯ ಸೇವೆಗಳು, ವರದಿಗಳು ಮತ್ತು ಡಿಜಿಟಲ್ ವ್ಯವಸ್ಥೆಗಳು — <span>ಒಂದೇ ಸ್ಥಳದಲ್ಲಿ.</span>">Revenue services, reports and digital systems — <span>all in one place.</span></h2>
+            <p data-en="A clean single-page gateway for officers and citizens to access the existing Karnataka Revenue Department systems and resources." data-kn="ಅಧಿಕಾರಿಗಳು ಮತ್ತು ನಾಗರಿಕರು ಕರ್ನಾಟಕ ಕಂದಾಯ ಇಲಾಖೆಯ ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ವ್ಯವಸ್ಥೆಗಳು ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳನ್ನು ಸುಲಭವಾಗಿ ಪ್ರವೇಶಿಸಲು ಸರಳ ಒಂದೇ ಪುಟದ ಪೋರ್ಟಲ್.">A clean single-page gateway for officers and citizens to access the existing Karnataka Revenue Department systems and resources.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#services"><i class="bi bi-grid-fill"></i><span data-en="Explore Services" data-kn="ಸೇವೆಗಳನ್ನು ನೋಡಿ">Explore Services</span></a>
+                <a class="btn btn-light" href="https://karnataka.gov.in" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i><span data-en="Karnataka Government" data-kn="ಕರ್ನಾಟಕ ಸರ್ಕಾರ">Karnataka Government</span></a>
+            </div>
+        </div>
+
+        <div class="hero-panel">
+            <div class="hero-panel-head">
+                <div class="hero-photo-wrap" id="heroPhotoWrap">
+                    <img src="./assets/img/kumar_dc.jpeg" alt="Dr. Kumar, IAS" class="hero-mini-photo" loading="eager" onerror="this.style.display='none';document.getElementById('heroPhotoWrap').classList.add('photo-missing')">
+                    <span class="hero-photo-fallback">DK</span>
+                </div>
+                <div>
+                    <h3>Dr. Kumar, IAS</h3>
+                    <small data-en="Deputy Commissioner, Mandya" data-kn="ಜಿಲ್ಲಾಧಿಕಾರಿಗಳು, ಮಂಡ್ಯ">Deputy Commissioner, Mandya</small>
+                </div>
+            </div>
+            <p data-en="Deputy Commissioner Office, Mandya" data-kn="ಜಿಲ್ಲಾಧಿಕಾರಿ ಕಚೇರಿ, ಮಂಡ್ಯ">Deputy Commissioner Office, Mandya</p>
+            <div class="hero-stat-grid">
+                <div class="hero-stat"><strong>23</strong><span data-en="Service modules" data-kn="ಸೇವಾ ಘಟಕಗಳು">Service modules</span></div>
+                <div class="hero-stat"><strong>158</strong><span data-en="Quick links" data-kn="ತ್ವರಿತ ಕೊಂಡಿಗಳು">Quick links</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="ticker">
+    <div class="ticker-inner">
+        <div class="ticker-label"><i class="bi bi-lightning-fill"></i><span data-en="QUICK ACCESS" data-kn="ತ್ವರಿತ ಪ್ರವೇಶ">QUICK ACCESS</span></div>
+        <div class="ticker-track">
+            <div class="ticker-move">Bhoomi • Mojini • RTC Management • Parihara • RCCMS • Record Room • RRT Correction • Form 16A • Niveshane &amp; Sainik Samman • Hakku Patra • Reports • Land Conversion</div>
+        </div>
+    </div>
+</div>
+
+<section class="stats">
+    <div class="container stats-grid">
+        <div class="stat-card">
+            <div class="stat-icon"><i class="bi bi-grid-1x2-fill"></i></div>
+            <div><strong>23</strong><span data-en="Service modules" data-kn="ಸೇವಾ ಘಟಕಗಳು">Service modules</span></div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon"><i class="bi bi-link-45deg"></i></div>
+            <div><strong>158</strong><span data-en="Quick service links" data-kn="ತ್ವರಿತ ಸೇವಾ ಕೊಂಡಿಗಳು">Quick service links</span></div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon"><i class="bi bi-window-stack"></i></div>
+            <div><strong>1 Page</strong><span data-en="All links on the homepage" data-kn="ಎಲ್ಲಾ ಕೊಂಡಿಗಳು ಮುಖಪುಟದಲ್ಲೇ">All links on the homepage</span></div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon"><i class="bi bi-box-arrow-up-right"></i></div>
+            <div><strong>Direct</strong><span data-en="Access to official systems" data-kn="ಅಧಿಕೃತ ವ್ಯವಸ್ಥೆಗಳಿಗೆ ನೇರ ಪ್ರವೇಶ">Access to official systems</span></div>
+        </div>
+    </div>
+</section>
+
+
+<section class="district-info" id="district-profile">
+    <div class="container">
+        <div class="info-layout">
+            <article class="info-card">
+                <div class="info-card-head">
+                    <div class="info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div><h3>About Mandya District</h3><p>District profile and key geographical information</p></div>
+                </div>
+                <div class="info-card-body about-copy">
+                    <p>The district receives an average annual rainfall of <strong>700 millimeters</strong>. The climate of the district comprises of moderate summers (Maximum <strong>35 degree Celsius</strong>) and moderate winters (Minimum <strong>20 degree Celsius</strong>).</p>
+                    <p>The District lies between <strong>76° 19′ and 77° 20′ East Longitude</strong> and <strong>12° 13′ and 13° 04′ North Latitude</strong>. It is bounded on the North by Hassan and Tumkur Districts, on the East by Tumkur and Bangalore Districts, on the South by Mysore and on the West by the districts of Hassan and Mysore.</p>
+                    <p>Mandya district comprises of <strong>7 taluks</strong>. The total geographical area of the district is <strong>4,98,244 Hectares</strong>, out of which <strong>2,53,067 Hectares</strong> forms the sown area. More than half of the total land area in the district is put to agricultural use. <strong>94,779 Hectares</strong> of land is irrigated. With a total population of <strong>19.25 lakhs</strong>, around <strong>5 lakh people</strong> are employed in the Agriculture Sector.</p>
+                    <p>The district headquarters is <strong>Mandya city</strong>, which is located on the Bangalore-Mysore Highway. Mandya city is around 100 Kilometres away from Bangalore City and Mysore city is around 40 Kilometres away from Mandya city. The other towns of the district are Maddur, Malavalli, Srirangapatna, Nagamangala, Krishnaraj Pete and Pandavapura.</p>
+                    <p>Mandya city is well connected by road and rail. All trains between Bangalore and Mysore pass through Maddur, Mandya, Pandavapura and Srirangapatna. The nearest airport is Bangalore city, which is around two hours drive by road.</p>
+                </div>
+            </article>
+            <aside class="info-card">
+                <div class="info-card-head">
+                    <div class="info-icon" style="background:var(--green-soft);color:var(--green)"><i class="bi bi-bar-chart-fill"></i></div>
+                    <div><h3>District At a Glance</h3><p>Key district indicators</p></div>
+                </div>
+                <div class="info-card-body"><div class="glance-grid">
+                    <div class="glance-item"><div class="label">Area</div><div class="value">4962 Sq. Km.</div></div>
+                    <div class="glance-item"><div class="label">Population</div><div class="value">1805769</div></div>
+                    <div class="glance-item"><div class="label">Language</div><div class="value">Kannada</div></div>
+                    <div class="glance-item"><div class="label">Villages</div><div class="value">1477</div></div>
+                    <div class="glance-item"><div class="label">Taluks</div><div class="value">7</div></div>
+                    <div class="glance-item"><div class="label">Sub-Divisions</div><div class="value">2</div></div>
+                </div></div>
+            </aside>
+        </div>
+        <div class="admin-summary">
+            <div class="info-card">
+                <div class="info-card-head">
+                    <div class="info-icon" style="background:var(--pink-soft);color:var(--pink)"><i class="bi bi-diagram-3-fill"></i></div>
+                    <div><h3>Revenue Administration</h3><p>Revenue Sub-Divisions, Taluks and Villages</p></div>
+                </div>
+                <div class="info-card-body">
+                    <div class="summary-grid">
+                        <div class="admin-total blue"><span class="small">Revenue Sub-Divisions</span><strong>2</strong></div>
+                        <div class="admin-total green"><span class="small">Revenue Taluks</span><strong>7</strong></div>
+                        <div class="admin-total orange"><span class="small">Revenue Villages</span><strong>1477</strong></div>
+                    </div>
+                    <div style="margin-top:18px"><div class="admin-table-wrap"><table class="admin-table">
+                        <thead><tr><th>S.No</th><th>Name of the Revenue Sub-Division</th></tr></thead>
+                        <tbody><tr><td>1</td><td>Mandya</td></tr><tr><td>2</td><td>Pandavapura</td></tr></tbody>
+                    </table></div></div>
+                    <div style="margin-top:18px"><div class="admin-table-wrap"><table class="admin-table">
+                        <thead><tr><th>Sl.no</th><th>Name of the Subdivision</th><th>Taluk</th></tr></thead>
+                        <tbody>
+                            <tr><td>1</td><td>Mandya</td><td>Mandya</td></tr>
+                            <tr><td>2</td><td>Mandya</td><td>Mallavali</td></tr>
+                            <tr><td>3</td><td>Mandya</td><td>Maddur</td></tr>
+                            <tr><td>4</td><td>Pandavapura</td><td>Pandavapura</td></tr>
+                            <tr><td>5</td><td>Pandavapura</td><td>K.R.Pet</td></tr>
+                            <tr><td>6</td><td>Pandavapura</td><td>Srirangapatna</td></tr>
+                            <tr><td>7</td><td>Pandavapura</td><td>Nagamangala</td></tr>
+                        </tbody>
+                    </table></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="services" id="services">
+    <div class="container">
+        <div class="section-head">
+            <div class="section-title">
+                <h2 data-en="All Revenue Service Links" data-kn="ಎಲ್ಲಾ ಕಂದಾಯ ಸೇವಾ ಕೊಂಡಿಗಳು">All Revenue Service Links</h2>
+                <p data-en="Existing service URLs from the supplied portal, reorganised into a cleaner Mandya homepage." data-kn="ನೀಡಲಾದ ಪೋರ್ಟಲ್‌ನ ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಸೇವಾ URLಗಳನ್ನು ಸರಳವಾದ ಮಂಡ್ಯ ಮುಖಪುಟದಲ್ಲಿ ಮರುಸಂಘಟಿಸಲಾಗಿದೆ.">Existing service URLs from the supplied portal, reorganised into a cleaner Mandya homepage.</p>
+            </div>
+            <div class="filter-pills">
+                <button class="filter-pill active" onclick="filterCards('all',this)">All</button>
+                <button class="filter-pill" onclick="filterCards('land',this)">Land &amp; RTC</button>
+                <button class="filter-pill" onclick="filterCards('revenue',this)">Revenue</button>
+                <button class="filter-pill" onclick="filterCards('reports',this)">Reports</button>
+            </div>
+        </div>
+
+        <div class="links-grid" id="linksGrid">
+            <div class="card" id="Land-Conversion">
+<h3><i class="bi bi-diagram-3"></i> <span data-en="Land Conversion" data-kn="ಭೂ ಪರಿವರ್ತನೆ">Land Conversion</span></h3>
+<ul>
+<li><a href="http://landrecords.karnataka.gov.in/rd" target="_blank">Home</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service80" target="_blank">Status</a></li>
+<li><a href="https://landconversion.karnataka.gov.in/service99" target="_blank">Order Print</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/citizenportal/" target="_blank">Citizen Login</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service132/Home/Report" target="_blank">Approved Dates</a></li>
+<li><a href="https://landconversion.karnataka.gov.in/Service74/afdlcreport/" target="_blank">Report with Userid</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service52/" target="_blank">Patta Land</a></li>
+<li><a href="https://drive.google.com/file/d/1kfVSS16jLfueQHF93jD4UqA5TvapA22n/view" target="_blank">User Manual</a></li>
+</ul>
+</div>
+<div class="card" id="RTC-Management">
+<h3><i class="bi bi-hdd-stack"></i> <span data-en="RTC Mgmt" data-kn="ಆರ್.ಟಿ.ಸಿ ನಿರ್ವಹಣೆ">RTC Mgmt</span></h3>
+<ul>
+<li><a href="https://landrecords.karnataka.gov.in/Service109/rtcmgm/" target="_blank">Home</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service109/rrtcorrection/" target="_blank">RRT Correction</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service109/RRTCMreports/" target="_blank">RRT Report</a></li>
+<li><a href="https://docs.google.com/document/d/13DuohMS4SfsbplyqEV-fe_l1tn8DWGsJ/edit" target="_blank">RRT Manual</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service109/rtc_mgm_mis/" target="_blank">Report &amp; Status</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service85/Login1.aspx" target="_blank">Old Jslip Approval AC</a></li>
+<li><a href="https://parihara.karnataka.gov.in/service82/" target="_blank">SLAO Case Worker</a></li>
+<li><a href="https://parihara.karnataka.gov.in/service83" target="_blank">SLAO Login</a></li>
+<li><a href="https://drive.google.com/file/d/1ijq0FEE7QNTJ9BG_QC0HdEZeCxgiPsE6/view" target="_blank">User Manual</a></li>
+</ul>
+</div>
+<div class="card" id="Mojini">
+<h3><i class="bi bi-rulers"></i> <span data-en="Mojini" data-kn="ಮೊಜಿನಿ">Mojini</span></h3>
+<ul>
+<li><a href="https://www.rdservices.karnataka.gov.in/" target="_blank">Home</a></li>
+<li><a href="https://bhoomojini.karnataka.gov.in/service55" target="_blank">Darkasth Phodi</a></li>
+<li><a href="https://bhoomojini.karnataka.gov.in/SERVICE30/RRTCase/RRT_Report" target="_blank">Datewise Report</a></li>
+<li><a href="https://bhoomojini.karnataka.gov.in/service24/" target="_blank">RRT &amp; LND Report</a></li>
+<li><a href="https://bhoomojini.karnataka.gov.in/service19/" target="_blank">View Sketch</a></li>
+<li><a href="https://bhoomojini.karnataka.gov.in/service39/" target="_blank">Akarband</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/Service10" target="_blank">Phodi Status and Report</a></li>
+<li><a href="https://bhoomojini.karnataka.gov.in/service19/report/Applicationdetails" target="_blank">Sketch Printing</a></li>
+<li><a href="https://bhoomojini.karnataka.gov.in/oscitizen/" target="_blank">Survey Documents For Citizen</a></li>
+</ul>
+</div>
+<div class="card" id="Bhoomi">
+<h3><i class="bi bi-globe2"></i> <span data-en="Bhoomi" data-kn="ಭೂಮಿ">Bhoomi</span></h3>
+<ul>
+<li><a href="https://www.govtanalytics.karnataka.gov.in/bhoomidi/" target="_blank">DI Ranking</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/Service147/" target="_blank">Pendancy</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service60/" target="_blank">Mutation Status</a></li>
+<li><a href="https://www.landrecords.karnataka.gov.in/service40/" target="_blank">Report Villagewise</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/Service121" target="_blank">Mutation Report</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service7/" target="_blank">Bhoomi Report</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service10/" target="_blank">Mojini-Phody Status Online</a></li>
+</ul>
+</div>
+<div class="card" id="Bagair-Hukum-Rejection">
+<h3><i class="bi bi-slash-circle"></i> <span data-en="BH Rejection" data-kn="ಬಗೇರ್ ಹುಕುಂ ನಿರಾಕರಣೆ">BH Rejection</span></h3>
+<ul>
+<li><a href="https://rdservices.karnataka.gov.in/service43" target="_blank">VAO Login</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service88" target="_blank">RI Login</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service89" target="_blank">DT Login</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service52" target="_blank">DCCW</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service52" target="_blank">Tahsildar</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service52" target="_blank">DC</a></li>
+</ul>
+</div>
+<div class="card" id="Land-Beat">
+<h3><i class="bi bi-shield-check"></i> <span data-en="Land Beat" data-kn="Land ಬೀಟ್">Land Beat</span></h3>
+<ul>
+<li><a href="https://rdservices.karnataka.gov.in/service57" target="_blank">RI Login</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service57" target="_blank">Tahsildar</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service55" target="_blank">Reports</a></li>
+<li><a href="https://drive.google.com/file/d/1f0d_0vNj2lumqXyhIcpCEaiSozKlQP15/view" target="_blank">User Manual</a></li>
+</ul>
+</div>
+<div class="card" id="RTC-Online">
+<h3><i class="bi bi-reception-4"></i> <span data-en="RTC Online" data-kn="ಆರ್.ಟಿ.ಸಿ ಆನ್‌ಲೈನ್">RTC Online</span></h3>
+<ul>
+<li><a href="https://landrecords.karnataka.gov.in/Service2/" target="_blank">RTC, MR, Mutation</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service40/PendcySurveyNoWiseRpt" target="_blank">MR History</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service150" target="_blank">RTC for VAO</a></li>
+<li><a href="https://rdreports.karnataka.gov.in/" target="_blank">RTC Detailed Report</a></li>
+</ul>
+</div>
+<div class="card" id="Record-Room">
+<h3><i class="bi bi-inboxes-fill"></i> <span data-en="Record Room" data-kn="ರೆಕಾರ್ಡ್ Room">Record Room</span></h3>
+<ul>
+<li><a href="https://recordroom.karnataka.gov.in/ERECORDROOM/" target="_blank">Home</a></li>
+<li><a href="https://recordroom.karnataka.gov.in/reports" target="_blank">Reports</a></li>
+<li><a href="https://drive.google.com/file/d/1JrxZr50PYNiG4wF_Flt_zWr0HCxoALr4/view" target="_blank">User Manual</a></li>
+<li><a href="https://drive.google.com/file/d/1XkqOQrtxGxLF1j4Wf2dU4SE53h3VqG4a/view" target="_blank">Manual</a></li>
+<li><a href="https://drive.google.com/drive/folders/1CGJ7LMfI5eA2n-nfUgHgxLVwSHb-CuEw?usp=sharing">Circular &amp; Training Materials</a></li>
+</ul>
+</div>
+<div class="card" id="Ex-Servicemen">
+<h3><i class="bi bi-person-lines-fill"></i> <span data-en="Ex Servicemen" data-kn="ಮಾಜಿ ಸೇವಕರು">Ex Servicemen</span></h3>
+<ul>
+<li><a href="https://landrecords.karnataka.gov.in/Service155/exsm/" target="_blank">Data Entry</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service155/ExsmMisReport" target="_blank">Report</a></li>
+<li><a href="https://drive.google.com/file/d/1gNATgoBeNELIc7qH3Td-8585XdV8qu8B/view" target="_blank">User Manual</a></li>
+</ul>
+</div>
+<div class="card" id="Sub-Register">
+<h3><i class="bi bi-file-lock"></i> <span data-en="Sub Register" data-kn="ಸಬ್ ರಜಿಸ್ಟರ್">Sub Register</span></h3>
+<ul>
+<li><a href="https://landrecords.karnataka.gov.in/service146" target="_blank">Jslip Status</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service159" target="_blank">Eswathu Status</a></li>
+<li><a href="https://eswathu.karnataka.gov.in/Issue0fForm9/Frm_PublicSearchForm9.aspx" target="_blank">Status</a></li>
+</ul>
+</div>
+<div class="card" id="Parihara">
+<h3><i class="bi bi-bank2"></i> <span data-en="Parihara" data-kn="ಪರಿಹಾರ">Parihara</span></h3>
+<ul>
+<li><a href="https://parihara.karnataka.gov.in/Pariharahome/" target="_blank">Home</a></li>
+<li><a href="https://parihara.karnataka.gov.in/service89/PaymentDetailsReport.aspx" target="_blank">Payment Details</a></li>
+<li><a href="https://parihara.karnataka.gov.in/service92" target="_blank">Payment Status</a></li>
+<li><a href="https://parihara.karnataka.gov.in/PariharaPayment/" target="_blank">Payment</a></li>
+<li><a href="https://parihara.karnataka.gov.in/service22/" target="_blank">Data Entry Progress</a></li>
+<li><a href="https://parihara.karnataka.gov.in/pariharausermgmt" target="_blank">User Management</a></li>
+<li><a href="https://parihara.karnataka.gov.in/CropCollectionVAO" target="_blank">Crop Data Entry VAO</a></li>
+<li><a href="https://parihara.karnataka.gov.in/CropCollectionTah/" target="_blank">Approval Tahsildar</a></li>
+<li><a href="https://parihara.karnataka.gov.in/pariharatahsildara" target="_blank">Name Mismatch Tahsildar</a></li>
+<li><a href="https://parihara.karnataka.gov.in/CropReportApproval/" target="_blank">DC &amp; AC Approval</a></li>
+<li><a href="https://drive.google.com/file/d/1NEetYkRn0Ix9NkwoooQbngY9lX5-QYw8/view" target="_blank">User Manual</a></li>
+<li><a href="https://drive.google.com/file/d/1AHGixWu0GMaNLMKhQaUCLpYJSRsAb23O/view" target="_blank">VAO Crop Collection</a></li>
+</ul>
+</div>
+<div class="card" id="Bagair-Hukum">
+<h3><i class="bi bi-newspaper"></i> <span data-en="Bagair Hukum" data-kn="ಬಗೈರ್ ಹುಕುಂ">Bagair Hukum</span></h3>
+<ul>
+<li><a href="https://rdservices.karnataka.gov.in/service54" target="_blank">Main website</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service43" target="_blank">VAO Login</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service45" target="_blank">RI Login</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service45" target="_blank">DT Login</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service45" target="_blank">Tahsildar Login</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service45" target="_blank">Committee</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service45" target="_blank">TCCW</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service87" target="_blank">Application Status</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service131/form57/" target="_blank">Form 57 Report</a></li>
+<li><a href="https://bhoomi.karnataka.gov.in/FORM5053/" target="_blank">Form 50 53 Count</a></li>
+<li><a href="https://bhoomojini.karnataka.gov.in/service55" target="_blank">BH Mojini Status</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service149" target="_blank">Form 50 &amp; 53 Rec Cases</a></li>
+<li><a href="https://docs.google.com/presentation/d/1yTfMzC8J0UYHy14w69OnfOXF-5gnXRXG/edit#slide=id.p1" target="_blank">User Manual</a></li>
+<li><a href="https://drive.google.com/file/d/1X7xGaE1umvzLI2BNqEE2LpJPkr2vpKHv/view" target="_blank">Work Flow</a></li>
+<li><a href="https://docs.google.com/document/d/1-qp-qt2BWje2nBvibKgBgvYSX93eB0qz/edit">BH Offline Manual</a></li>
+</ul>
+</div>
+<div class="card" id="Form-1-to-5">
+<h3><i class="bi bi-journal-text"></i> <span data-en="Form 1 to 5" data-kn="ಫಾರಂ 1 ರಿಂದ 5">Form 1 to 5</span></h3>
+<ul>
+<li><a href="https://rdservices.karnataka.gov.in/service73" target="_blank">Shirestedar</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service72" target="_blank">VAO</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service75" target="_blank">RI</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service76" target="_blank">Tahsildar</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service79" target="_blank">ADLR</a></li>
+<li><a href="https://drive.google.com/file/d/1mVmhPfuAi2C-h2sxIjC7gjs-2zNjq8eS/view" target="_blank">User Manual</a></li>
+<li><a href="https://drive.google.com/file/d/1DSkH85TNgINg4zDQsdmd8WbRQyoGlag-/view" target="_blank">Work Flow</a></li>
+<li><a href="https://drive.google.com/file/d/1Pihc2p3_1M5I6i0LADe1j8SWp6KzTYyw/view" target="_blank">DFO &amp; Tahsildar</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service77" target="_blank">AC</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service78" target="_blank">DDLR</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service95" target="_blank">DC</a></li>
+</ul>
+</div>
+<div class="card" id="Reports">
+<h3><i class="bi bi-clipboard-data"></i> <span data-en="Reports" data-kn="ವರದಿಗಳು">Reports</span></h3>
+<ul>
+<li><a href="https://rdservices.karnataka.gov.in/service81" target="_blank">1 to 5 Report</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/Service51/" target="_blank">Bagair Hukum</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service63" target="_blank">Aadhar Seeding</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/AadharReport_test/AadharSeeding/EPautiBifercationReport">Pouthi Report</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service55" target="_blank">Land Beat</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/Service68" target="_blank">Hakku Patra</a></li>
+<li><a href="https://drive.google.com/drive/folders/14TNdy0LzMdIcsx5sjEWiYcDEaXvIO_ry?usp=sharing">Hakku Patra Manual</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service147/bhoomipendency/" target="_blank">Bhoomi Pendancy</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service110" target="_blank">MIS RTC, 3 &amp; 9, Pyki Mismatch</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/bhoomigis/" target="_blank">Bhoomi GIS</a></li>
+<li><a href="https://landrecords.karnataka.gov.in/service154/" target="_blank">RTC and Mutation Extract</a></li>
+<li><a href="https://rdreports.karnataka.gov.in/" target="_blank">Revenue Dashboard</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/BhoomiMaps/" target="_blank">Bhoomi Maps</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/echawadi/" target="_blank">E-Chavadi</a></li>
+</ul>
+</div>
+<div class="card" id="Aadhar-Seeding-RTC">
+<h3><i class="bi bi-qr-code-scan"></i> <span data-en="Aadhar/E-Pouthi" data-kn="ಆಧಾರ/ಇ-ಪೌತಿ">Aadhar/E-Pouthi</span></h3>
+<ul>
+<li><a href="https://rdservices.karnataka.gov.in/service62" target="_blank">VAO Login</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service124" target="_blank">E-Pouhti RI and SHR Login</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service82" target="_blank">Status</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service63" target="_blank">Reports</a></li>
+<li><a href="https://drive.google.com/file/d/1KTZne5fnaX9SsUvRpChqW7EBJjaKdrEm/view" target="_blank">User Manual</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/Service63/AadharSeeding/EPautiKhataProgressReport" target="_blank">E-Pouthi Reports</a></li>
+<li><a href="https://drive.google.com/file/d/12I5-u-BUX-c-K9YJudGaF86XMimTFfl_/view" target="_blank">RTC Verification Manual</a></li>
+<li><a href="https://drive.google.com/file/d/1MWWPpKqGntN0jjGOkxRqC9MuFcm31Vpi/view" target="_blank">E Pouthi VAO User Manual</a></li>
+<li><a href="https://drive.google.com/file/d/1SZrmBv4P9c7S3U5Jp7g4Jj4EDMTp3HDL/view" target="_blank">E Pouthi RI and SHR User Manual</a></li>
+<li><a href="https://drive.google.com/drive/folders/1RvgzvEY8zcpDvo2b4dARxdZXyk3m4F2O?usp=sharing" target="_blank">Pouthi Circular Manual</a></li>
+</ul>
+</div>
+<div class="card" id="RCCMS">
+<h3><i class="bi bi-collection"></i> <span data-en="RCCMS" data-kn="ಆರ್.ಸಿ.ಸಿ.ಎಂ.ಎಸ್">RCCMS</span></h3>
+<ul>
+<li><a href="https://rccms.karnataka.gov.in/rccms/" target="_blank">Home</a></li>
+<li><a href="https://rccms.karnataka.gov.in/RCCMS/rccmsreports/searchcase.aspx" target="_blank">Status</a></li>
+<li><a href="https://drive.google.com/file/d/1UWhpQjtJO4Q5TFKAJO1R7LefQE3QDKwL/view" target="_blank">User Manual</a></li>
+<li><a href="https://drive.google.com/file/d/1wI1G3GACukFrGSWNWbLsHjhRCd2Nu7hP/view" target="_blank">Order Typing</a></li>
+<li><a href="https://drive.google.com/file/d/1oR_ns2Qc7T3yAOcjDtgTPjjsU60hCiMh/view" target="_blank">RCCMS Manual</a></li>
+</ul>
+</div>
+<div class="card" id="Land-Availability">
+<h3><i class="bi bi-signpost-split"></i> <span data-en="Land Availability" data-kn="ಭೂ ಲಭ್ಯತೆ">Land Availability</span></h3>
+<ul>
+<li><a href="https://rdservices.karnataka.gov.in/landavailability_tccw" target="_blank">Data Entry TCCW</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/landavailability_tah" target="_blank">Approval Tahsildar</a></li>
+<li><a href="https://drive.google.com/file/d/1TCFBgoJn_mpdGkfGIRmjWU2m3TKYZi9T/view" target="_blank">User Manual</a></li>
+</ul>
+</div>
+<div class="card" id="Plantation-on-Lease">
+<h3><i class="bi bi-tree"></i> <span data-en="Plantation" data-kn="ತೋಟಗಾರಿಕೆ">Plantation</span></h3>
+<ul>
+<li><a href="https://landrecords.karnataka.gov.in/Service158/plantationlease/" target="_blank">Data Entry TCCW</a></li>
+<li><a href="https://drive.google.com/file/d/1nfwMclx1XHe2c5jHrxQF1VUTaxQgfUO9/view" target="_blank">User Manual</a></li>
+</ul>
+</div>
+<div class="card" id="Softwares">
+<h3><i class="bi bi-android2"></i> <span data-en="Mobile Apps" data-kn="Softwares">Softwares</span></h3>
+<ul>
+<li><a href="https://drive.google.com/drive/u/0/folders/1E2Pw54inV99bT8O61aC7juv-VIRTVkYT">Download Apps</a></li>
+<li><a href="https://drive.google.com/drive/folders/1-yhCeJwn4m39LUWT31U01LOga1ZlMzyu?usp=sharing">Bhoomi Reports Datewise</a></li>
+<li><a href="https://drive.google.com/drive/folders/1PmhB0_SivrMet8-KJ_15YNhySjXmmCFe?usp=drive_link">Bhoomi Ajsk Softwares</a></li>
+<li><a href="https://www.bhoomi.karnataka.gov.in/bhoomidcweb/Home" target="_blank">DC Govt Land Approval</a></li>
+<li><a href="https://rdapi.karnataka.gov.in/ams/Auth/Login" target="_blank">Asset Managment</a></li>
+<li><a href="https://bhoomojini.karnataka.gov.in/service72" target="_blank">Akarband Correction Report</a></li>
+</ul>
+</div>
+<div class="card" id="RRT-CORRECTION">
+<h3><i class="bi bi-hdd-stack"></i> <span data-en="RRT CORRECTION" data-kn="ಆರ್.ಟಿ.ಸಿ ನಿರ್ವಹಣೆ">RRT CORRECTION</span></h3>
+<ul>
+<li><a href="https://rdservices.karnataka.gov.in/service109/RRT_TCCW/" target="_blank">TCCW</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service109/RRT_VAO/" target="_blank">VAO</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service109/RRT_RI/" target="_blank">RI</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service109/RRT_SHR/" target="_blank">Shirestedar</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service109/RRT_TAH/" target="_blank">Tahsildar</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service109/RRT_ADLR/" target="_blank">ADLR</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service109/RRT_ACCW/">ACCW Case Worker</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service109/RRT_AC/">AC Login</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service109/RRTcmreports/">RRT Status</a></li>
+<li><a href="https://drive.google.com/file/d/1AFls5Jz7l0GXfBNPfXIFy51y-_rkRSQP/view?usp=sharing" target="_blank">RRT Manual</a></li>
+</ul>
+</div>
+<div class="card" id="Form16A-Verification">
+<h3><i class="bi bi-patch-check"></i> <span data-en="Form 16A Verification" data-kn="ಫಾರ್ಮ್ 16A ಪರಿಶೀಲನೆ">Form 16A Verification</span></h3>
+<ul>
+<li><a href=" https://landrecords.karnataka.gov.in/Service163" target="_blank">VAO</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service164/" target="_blank">Form 16a Report</a></li>
+<li><a href="https://www.youtube.com/watch?v=sIHbaxUZB90&amp;feature=youtu.be" target="_blank">Demo Video</a></li>
+<li><a href="https://drive.google.com/file/d/1F7J_4fklO4QAJlnh5MnRAscGrI-CBdet/view" target="_blank">User Manual</a></li>
+</ul>
+</div>
+<div class="card" id="Niveshane-Sainik-Samman">
+<h3><i class="bi bi-house-heart"></i> <span data-en="Niveshane and Sainik Samman" data-kn="ನಿವೇಶನ ಮತ್ತು ಸೈನಿಕ ಸಮ್ಮಾನ್">Niveshane and Sainik Samman</span></h3>
+<ul>
+<li><a href="https://rdservices.karnataka.gov.in/service160/" target="_blank">VAO</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service163/" target="_blank">Niveshane Report</a></li>
+<li><a href="https://www.youtube.com/watch?v=sIHbaxUZB90&amp;feature=youtu.be" target="_blank">Demo Video</a></li>
+<li><a href="https://drive.google.com/file/d/1F7J_4fklO4QAJlnh5MnRAscGrI-CBdet/view" target="_blank">User Manual</a></li>
+</ul>
+</div>
+<div class="card" id="Hakku-Patra">
+<h3><i class="bi bi-award-fill"></i> <span data-en="Hakku Patra" data-kn="ಹಕ್ಕು ಪತ್ರ">Hakku Patra</span></h3>
+<ul>
+<li><a href="https://rdservices.karnataka.gov.in/service65" target="_blank">Taluk Case Worker</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service69" target="_blank">Tahsildar</a></li>
+<li><a href="https://rdservices.karnataka.gov.in/service68" target="_blank">Report</a></li>
+<li><a href="https://drive.google.com/file/d/1iu4XMKRtn6i8ahtYHH1-TkIV7zqxO2yF/view?usp=sharing" target="_blank">User Manual</a></li>
+</ul>
+</div>
+            <div class="no-results" id="noResults"><i class="bi bi-search"></i><strong>No matching service found</strong><div>Try another service name or keyword.</div></div>
+        </div>
+    </div>
+</main>
+
+<section id="about" style="padding:0 0 55px">
+    <div class="container">
+        <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 5px 18px rgba(32,40,92,.04);display:flex;gap:18px;align-items:center">
+            <div style="width:46px;height:46px;border-radius:12px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;flex:0 0 auto"><i class="bi bi-building" style="font-size:1.2rem"></i></div>
+            <div>
+                <h3 style="font-size:.9rem;color:var(--navy)" data-en="Deputy Commissioner Office, Mandya" data-kn="ಜಿಲ್ಲಾಧಿಕಾರಿ ಕಚೇರಿ, ಮಂಡ್ಯ">Deputy Commissioner Office, Mandya</h3>
+                <p style="font-size:.7rem;color:var(--muted);margin-top:3px" data-en="Government of Karnataka • Revenue Department" data-kn="ಕರ್ನಾಟಕ ಸರ್ಕಾರ • ಕಂದಾಯ ಇಲಾಖೆ">Government of Karnataka • Revenue Department</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<button class="top-btn" id="topBtn" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div>
+                <h3>Deputy Commissioner Office, Mandya</h3>
+                <p data-en="Official one-page gateway for Revenue Department digital services and resources." data-kn="ಕಂದಾಯ ಇಲಾಖೆಯ ಡಿಜಿಟಲ್ ಸೇವೆಗಳು ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳಿಗೆ ಅಧಿಕೃತ ಒಂದೇ ಪುಟದ ಪ್ರವೇಶದ್ವಾರ.">Official one-page gateway for Revenue Department digital services and resources.</p>
+            </div>
+            <div>
+                <h4>Government</h4>
+                <ul>
+                    <li><a href="https://karnataka.gov.in" target="_blank" rel="noopener">Karnataka Government</a></li>
+                    <li><a href="https://kandaya.karnataka.gov.in/en" target="_blank" rel="noopener">Revenue Department</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Portal</h4>
+                <ul>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#services">All Services</a></li>
+                    <li><a href="#about">Office</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>DC</h4>
+                <ul>
+                    <li>Dr. Kumar, IAS</li>
+                    <li>Deputy Commissioner, Mandya</li>
+                    <li>Deputy Commissioner Office, Mandya</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© <span id="year"></span> Deputy Commissioner Office, Mandya. Government of Karnataka.</span>
+            <span>Single-page service portal</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+const cardCategories = {
+    "Land-Conversion":"land","RTC-Management":"land","Mojini":"land","Bhoomi":"land",
+    "Land-Beat":"land","RTC-Online":"land","Record-Room":"reports",
+    "Ex-Servicemen":"revenue","Sub-Register":"revenue","Parihara":"revenue",
+    "Bagair-Hukum":"revenue","Bagair-Hukum-Rejection":"revenue","Form-1-to-5":"revenue",
+    "Land-Availability":"revenue","Plantation-on-Lease":"revenue","Hakku-Patra":"revenue",
+    "Reports":"reports","Aadhar-Seeding-RTC":"reports","RCCMS":"reports",
+    "RRT-CORRECTION":"reports","Form16A-Verification":"reports",
+    "Niveshane-Sainik-Samman":"revenue","Softwares":"reports"
+};
+
+document.getElementById("today").textContent = new Intl.DateTimeFormat("en-IN", {
+    day:"2-digit", month:"short", year:"numeric"
+}).format(new Date());
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function filterCards(category, button) {
+    document.querySelectorAll(".filter-pill").forEach(b => b.classList.remove("active"));
+    if (button) button.classList.add("active");
+
+    document.querySelectorAll("#linksGrid .card").forEach(card => {
+        const show = category === "all" || cardCategories[card.id] === category;
+        card.style.display = show ? "" : "none";
+    });
+    applySearch();
+}
+
+function filterServices() {
+    applySearch();
+}
+
+function applySearch() {
+    const query = document.getElementById("siteSearch").value.trim().toLowerCase();
+    const active = document.querySelector(".filter-pill.active")?.textContent.trim().toLowerCase() || "all";
+    let visible = 0;
+
+    document.querySelectorAll("#linksGrid .card").forEach(card => {
+        const category = cardCategories[card.id] || "";
+        const categoryOK =
+            active === "all" ||
+            (active.includes("land") && category === "land") ||
+            (active.includes("revenue") && category === "revenue") ||
+            (active.includes("reports") && category === "reports");
+
+        const textOK = !query || card.innerText.toLowerCase().includes(query);
+        const show = categoryOK && textOK;
+        card.style.display = show ? "" : "none";
+        if (show) visible++;
+    });
+
+    document.getElementById("noResults").style.display = visible ? "none" : "block";
+}
+
+const topBtn = document.getElementById("topBtn");
+window.addEventListener("scroll", () => {
+    topBtn.style.display = window.scrollY > 500 ? "grid" : "none";
+});
+topBtn.addEventListener("click", () => window.scrollTo({top:0,behavior:"smooth"}));
+
+let kannada = false;
+function toggleLanguage() {
+    kannada = !kannada;
+    document.body.classList.toggle("kannada", kannada);
+    document.getElementById("langBtn").textContent = kannada ? "English" : "ಕನ್ನಡ";
+    document.querySelectorAll("[data-en]").forEach(el => {
+        const value = el.getAttribute(kannada ? "data-kn" : "data-en");
+        if (!value) return;
+        if (el.tagName === "INPUT") el.placeholder = value;
+        else if (el.innerHTML.includes("<span>") && value.includes("<span>")) el.innerHTML = value;
+        else el.textContent = value;
+    });
+}
+
+document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
+    link.addEventListener("click", () => {
+        document.querySelectorAll(".nav-link").forEach(x => x.classList.remove("active"));
+        link.classList.add("active");
+    });
+});
+</script>
+</body>
+</html>
